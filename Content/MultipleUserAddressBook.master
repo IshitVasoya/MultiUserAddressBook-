@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MultipleUserAddressBook.master.cs" Inherits="Content_MultipleUserAddressBook" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MultiUserAddressBook</title>    
+    <link href="../Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Css/bootstrap-theme.min.css" rel="stylesheet" />
+<%--    <link href="https://fonts.googleapis.com/css?family=Product+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet" />--%>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:lightgreen">
+    <form id="form1" runat="server">
+        <div class="container"><br />
+            <div class="row">
+                <div class="col-md-8 text-center">
+                    <h1>MultipleUser Adress Book</h1>
+                    <div>
+                        <asp:HyperLink runat="server" CssClass="text-decoration-none" ID="hlCountry" Text="Country" NavigateUrl="~/AdminPanel/Country/List" />&nbsp;&nbsp;|&nbsp;&nbsp
+                        <asp:HyperLink runat="server" CssClass="text-decoration-none" ID="hlState" Text="State" NavigateUrl="~/AdminPanel/State/List" />&nbsp;&nbsp;|&nbsp;&nbsp
+                        <asp:HyperLink runat="server" CssClass="text-decoration-none" ID="hlCity" Text="City" NavigateUrl="~/AdminPanel/City/List" />&nbsp;&nbsp;|&nbsp;&nbsp
+                        <asp:HyperLink runat="server" CssClass="text-decoration-none" ID="hlContactCategory" Text="ContactCategory" NavigateUrl="~/AdminPanel/ContactCategory/List" />&nbsp;&nbsp;|&nbsp;&nbsp
+                        <asp:HyperLink runat="server" CssClass="text-decoration-none" ID="hlContact" Text="Contact" NavigateUrl="~/AdminPanel/Contact/List" />
+                    </div>
+                </div><br /><br /><br />
+                <div class="col-md-4">
+                    <asp:Label runat="server" ID="lblUserName" />&nbsp;&nbsp;|&nbsp;&nbsp
+                    <asp:LinkButton ID="lbtnLogout" CssClass="text-decoration-none" runat="server" Text="Logout" OnClick="lbtnLogout_Click" />
+                </div>
+            </div><hr />
+            <div class="row" style="margin:20px">
+                <div class="col-md-12" style="background-color:forestgreen;padding-top:20px;padding-bottom:20px">
+                    <asp:ContentPlaceHolder id="cphMainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div><hr />
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    Ishit Vasoya | 190540107221 | 1905401072221@darchan.ac.in
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
